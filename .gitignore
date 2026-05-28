@@ -1,0 +1,91 @@
+# ==============================================================================
+# AVDYUVAK - Global Git Ignore Patterns
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Dependency Directories
+# ------------------------------------------------------------------------------
+# Ignore Node.js and PHP dependency directories anywhere in the repository
+node_modules/
+jspm_packages/
+web_modules/
+vendor/
+
+# ------------------------------------------------------------------------------
+# 2. Environment & Secret Files (CRITICAL for Security)
+# ------------------------------------------------------------------------------
+# Ignore all environment configurations and service credentials
+.env
+.env.*
+!.env.example
+firebase-service-account.json
+atmiyayuvak.json
+*.pem
+*.key
+secrets.json
+
+# ------------------------------------------------------------------------------
+# 3. Logs & Diagnostics
+# ------------------------------------------------------------------------------
+# Ignore log files generated during development or execution
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 4. Compiled Binaries & Build Artifacts (Android / Java)
+# ------------------------------------------------------------------------------
+# Ignore compiled Android builds to prevent repository bloat (e.g. 25MB+ APKs)
+*.apk
+*.ap_
+*.aab
+bin/
+gen/
+out/
+build/
+
+# ------------------------------------------------------------------------------
+# 5. Database Dumps & Migrations
+# ------------------------------------------------------------------------------
+# Ignore large local raw SQL database backups, but track migration scripts
+db/*.sql
+!db/migration*.sql
+
+# ------------------------------------------------------------------------------
+# 6. Dynamic Uploads & Generated Reports
+# ------------------------------------------------------------------------------
+# Ignore dynamic profile uploads but keep server configurations (.htaccess)
+profiles/*
+!profiles/.htaccess
+
+# Ignore generated Excel/PDF reports but keep directory structure
+report/*
+!report/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 7. Editor & IDE Configurations
+# ------------------------------------------------------------------------------
+# Ignore local workspace settings for common editors/IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.classpath
+.project
+.settings/
+
+# ------------------------------------------------------------------------------
+# 8. OS-Specific & Server Metadata
+# ------------------------------------------------------------------------------
+# Ignore system-generated and server configuration cache files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.ftpquota
